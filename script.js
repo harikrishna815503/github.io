@@ -1,0 +1,10 @@
+// Mobile nav toggle
+const toggle = document.querySelector('.nav-toggle');
+const links = document.querySelector('.nav-links');
+toggle?.addEventListener('click', () => links.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a =>
+  a.addEventListener('click', () => links.classList.remove('open'))
+);
+
+// Auto-update copyright year
+document.getElementById('year').textContent = new Date().getFullYear();
